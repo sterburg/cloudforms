@@ -1,0 +1,45 @@
+<%= chart :line %>
+
+  <%=component :chart_guide %>
+    horizontal:       true
+    vertical:         true
+    thickness:        2
+    alpha:            100
+    type:             dashed
+<% if @options[:graph_options][:chartsize] == :large %>
+    radius:           7
+<% end %>
+    line_color:       000000
+    line_alpha:       75
+    line_thickness:   2
+    text_h_alpha:     100
+    text_v_alpha:     100
+    separator:        ","
+<% if @options[:graph_options][:decimals] %>
+    decimals:         <%=@options[:graph_options][:decimals]%>
+<% end %>
+    text_color:       000000
+    background_color: ffffff
+<% if @options[:graph_options][:chartsize] == :large %>
+    size:             20
+<% elsif @options[:graph_options][:chartsize] == :medium %>
+    size:             16
+<% end %>
+
+  <%=component :chart_pref %>
+    point_shape:    circle
+    fill_shape:     true
+    point_size:     1
+<% if @options[:graph_options][:chartsize] == :large %>
+    line_thickness: 3
+<% else %>
+    line_thickness: 2
+<% end %>
+
+  <%=component :axis_value %>
+    min: 0
+
+  <%=component :chart_transition %>
+    type:     drop
+    order:    series
+    duration: 0.5

@@ -1,0 +1,117 @@
+#main_div
+  - url = url_for(:action => 'form_field_changed', :id => "#{@record.id || "new"}")
+
+  = render :partial => "layouts/flash_msg"
+
+  %h3
+    = _('Basic Information')
+  .form-horizontal
+    .form-group
+      %label.col-md-2.control-label
+        = _('Custom Identifier')
+      .col-md-8
+        = text_field_tag("custom_1",
+                          @edit[:new][:custom_1],
+                          :maxlength => 50,
+                          :class => "form-control",
+                          "data-miq_focus" => true,
+                          "data-miq_observe" => {:interval => '.5', :url => url}.to_json)
+    .form-group
+      %label.col-md-2.control-label
+        = _('Description')
+        (
+        %span#description_count>= @edit[:new][:description] ? @edit[:new][:description].length : 0
+        \/100)
+      .col-md-8
+        %div
+          = text_area_tag("description",
+                          @edit[:new][:description],
+                          :rows => 4,
+                          :maxlength => "100",
+                          :class => "form-control",
+                          :counter => "description_count",
+                          "data-miq_check_max_length" => true,
+                          "data-miq_observe" => {:interval => '.5', :url => url}.to_json)
+  %hr
+  %h3
+    = _('Parent VM Selection')
+  .form-horizontal
+    .form-group
+      %label.col-md-2.control-label
+        = _('Parent VM')
+      .col-md-8
+        = select_tag("chosen_parent",
+                      options_for_select(@edit[:pchoices].sort, @edit[:new][:parent]),
+                      :multiple => false,
+                      :class => "widthed",
+                      "data-miq_sparkle_on" => true,
+                      "data-miq_sparkle_off" => true,
+                      :class    => "selectpicker")
+    :javascript
+       miqInitSelectPicker();
+       miqSelectPickerEvent("chosen_parent", "#{url}")
+
+  %hr
+  %h3= _('Child VM Selection')
+  %table
+    %tr
+      %td.widthed{:align => "left"}= _('Child VMs:')
+      %td
+      %td{:align => "left"}= _('Available VMs:')
+    %tr
+      %td{:align => "right", :valign => "top"}
+        %div{:style => "overflow: auto; width: 400px; border: 1px solid #999999;"}
+          = select_tag('kids_chosen[]',
+            options_for_select(@edit[:new][:kids].sort),
+            :multiple => true,
+            :style => "width:auto; min-width:375px; border: 0px;",
+            :size => 15,
+            :style => "width: 400px",
+            :id => "kids_chosen")
+      %td{:width => "20"}
+        = link_to(image_tag("/images/toolbars/right.png",
+            :class => "rollover small",
+            :style => "width: 28px; height: 28px",
+            :alt => (t = _("Move selected VMs to right"))),
+          {:action => 'form_field_changed',
+            :button => 'right',
+            :id => "#{@record.id || "new"}"},
+          "data-submit" => 'main_div',
+          "data-miq_sparkle_on" => true,
+          :remote => true,
+          :title => t)
+
+        = link_to(image_tag("/images/toolbars/allright.png",
+            :class => "rollover small",
+            :style => "width: 28px; height: 28px",
+            :alt => (t = _("Move all VMs to right"))),
+          {:action => 'form_field_changed',
+            :button => 'allright',
+            :id => "#{@record.id || "new"}"},
+          "data-submit" => 'main_div',
+          "data-miq_sparkle_on" => true,
+          :remote => true,
+          :title => t)
+
+        = link_to(image_tag("/images/toolbars/left.png",
+            :class => "rollover small",
+            :style => "width: 28px; height: 28px",
+            :alt => (t = _("Move selected VMs to left"))),
+          {:action => 'form_field_changed',
+            :button => 'left',
+            :id => "#{@record.id || "new"}"},
+          "data-submit" => 'main_div',
+          "data-miq_sparkle_on" => true,
+          :remote => true,
+          :title => t)
+      %td{:align => "left", :valign => "top"}
+        %div{:style => "overflow: auto; width: 400px; border: 1px solid #999999;"}
+          = select_tag('choices_chosen[]',
+            options_for_select(@edit[:choices].sort),
+            :multiple => true,
+            :style => "width: 400px; min-width:375px; border: 0px;",
+            :size => 15,
+            :id => "choices_chosen")
+
+  - unless @edit[:explorer]
+    = render(:partial => '/layouts/edit_form_buttons', :locals  => {:action_url => "edit_vm", :ajax_buttons => true, :record_id => @record.id})

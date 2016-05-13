@@ -1,0 +1,18 @@
+<%= chart :parallel_threed_column %>
+
+  <%=component :chart_label %>
+    position: cursor
+    background_color: ffffff
+   
+  <%=comp :axis_category %>
+    orientation: diagonal_down
+    
+  <%=comp :chart_border %>
+    left_thickness:   1
+    bottom_thickness: 3
+    
+  <%=comp :chart_grid_h %>
+    thickness: 3
+  
+  <%=comp :chart_grid_v %>
+    thickness: 1   

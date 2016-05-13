@@ -1,0 +1,25 @@
+<%= chart :stacked_threed_column %>
+
+  <%=component :chart_label %>
+    position: cursor
+    background_color: ffffff
+
+  <%=component :axis_category %>
+    orientation:   diagonal_up
+    color:  000000
+    bold:   true
+    alpha:  100
+    
+  <%=component :chart_rect %>
+    positive_color: ffffff      
+    positive_alpha: 50
+    negative_color: ffff66
+    negative_alpha: 50
+    y: 50
+
+  <%=component :chart_transition %>
+  type: dissolve
+  duration: 0.4
+    
+
+

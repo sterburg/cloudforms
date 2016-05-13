@@ -1,0 +1,73 @@
+<%= chart :base %>
+  <%=component :axis_category %>
+
+  <%=component :axis_value %>
+    color:       a79d91
+    skip:        0
+    alpha:       100
+    size:        10
+
+  <%=component :chart_rect %>
+    positive_color: f8af68
+    positive_alpha: 0
+    negative_color: f88868
+    negative_alpha: 0
+
+  <%=component :axis_ticks %>
+    major_color: 54544c
+    minor_color: a19d91
+    value_ticks: true
+
+  <%=component :chart_border %>
+
+  <%=component :chart_grid_h %>
+    thickness: 0
+    color:     000000
+    alpha:     7
+
+  <%=component :chart_grid_v %>
+    thickness: 0
+    color:     000000
+    alpha:     7
+
+  <%=component :chart_label %>
+    bold: true
+    position: inside
+    separator: ','
+<% if @options[:graph_options][:decimals] %>
+    decimals:         <%=@options[:graph_options][:decimals]%>
+<% end %>
+
+  <%=component :filter %>
+    filters:   
+    - <%= filter_type :bevel %>
+        id:               bevel_data
+        angle:            0
+        blurX:            10
+        blurY:            10
+        distance:         0
+        highlightAlpha:   50
+        highlightColor:   ffffff
+        shadowColor:      ffffff
+        shadowAlpha:      100
+        strength:         1
+        type:             outer
+    - <%= filter_type :glow %>
+        id:     glow_data
+        color:  000000
+        alpha:  11
+        blurX:  40
+        blurY:  40
+        inner:  true
+    - <%= filter_type :shadow %>
+        id:        shadow_data
+#        blurY:     2
+#        angle:     45
+#        alpha:     30
+#        distance:  2
+#        blurX:     2
+#     - <%= filter_type :blur %>
+#         id:        blur_data
+#         blurX:     8
+#         blurY:     8
+#         quality:   3

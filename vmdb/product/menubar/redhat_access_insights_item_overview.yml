@@ -1,0 +1,11 @@
+type: item
+name: Overview
+id: accessInsightsOverview
+
+feature: redhat_access_insights_overview
+rbac:
+  feature: redhat_access_insights_overview
+
+parent: accessInsights
+href: /redhat_access/insights/
+item_type: big_iframe

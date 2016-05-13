@@ -1,0 +1,28 @@
+---
+en:
+  product:
+    name: CFME
+  advanced_settings:
+    menu_order:
+    - dhcp
+    - static
+    - testnet
+    - hostname
+    - datetime
+    - dbrestore
+    - dbregion_setup
+    - db_config
+    - tmp_config
+    - httpdauth
+    - key_gen
+    - scap
+    - evmstop
+    - evmstart
+    - restart
+    - shutdown
+    - summary
+    - quit
+    dbregion_setup: Setup Database Region
+    db_config: Configure Database
+    tmp_config: Extend Temporary Storage
+    scap: Harden Appliance Using SCAP Configuration

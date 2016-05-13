@@ -1,0 +1,5 @@
+<%= chart :base %> 
+
+  <%=component :context_menu %>
+    about: false
+    print: false

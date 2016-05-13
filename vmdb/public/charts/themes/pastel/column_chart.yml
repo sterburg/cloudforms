@@ -1,0 +1,68 @@
+<%=chart :column%>
+
+  <%=component :chart_guide %>
+    horizontal:       true
+    vertical:         false
+    thickness:        2
+    alpha:            100
+    type:             dashed
+<% if @options[:graph_options][:chartsize] == :large %>
+    radius:           7
+<% end %>
+    line_color:       000000
+    line_alpha:       75
+    line_thickness:   2
+    text_h_alpha:     100
+    text_v_alpha:     100
+    separator:        ","
+<% if @options[:graph_options][:decimals] %>
+    decimals:         <%=@options[:graph_options][:decimals]%>
+<% end %>
+    text_color:       000000
+    background_color: ffffff
+<% if @options[:graph_options][:chartsize] == :large %>
+    size:             20
+<% elsif @options[:graph_options][:chartsize] == :medium %>
+    size:             16
+<% end %>
+<% if @options[:graph_options][:value_suffix] %>
+    suffix_h:         '<%=@options[:graph_options][:value_suffix]%>'
+<% end %>
+
+  # Set x axis styles
+  <%=component :axis_category%>
+    skip:             0
+    bold:             true
+
+  # Set x/y axis ticks color
+  <%=component :axis_ticks%>
+    value_ticks:      true
+    category_ticks:   true
+    major_thickness:  1
+    major_color:      54544c
+    minor_thickness:  1
+    minor_color:      a19d91
+    minor_count:      5
+
+  # Set default chart border
+  <%=component :chart_border%>
+
+  # Set horizontal grid color
+  <%=component :chart_grid_h%>
+    thickness:        1
+    color:            000000
+    alpha:            7
+    type:             solid
+
+  # Set vertical grid color
+  <%=component :chart_grid_v%>
+    thickness:        1
+    color:            000000
+    alpha:            7
+    type:             solid
+
+  <%=component :chart_label %>
+    size:   18
+    color:     000000
+    position: inside
+    alpha:    40

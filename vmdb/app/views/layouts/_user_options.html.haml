@@ -1,0 +1,34 @@
+- if current_user
+  %li.dropdown
+    %a{:href => "#", :class => "dropdown-toggle", "data-toggle" => "dropdown"}
+      %span.pficon.pficon-user
+      = "#{current_user.name} | #{appliance_name}"
+      %b.caret
+    %ul.dropdown-menu
+      %li.disabled
+        %a{:href => "#"}
+          = _('Server: %s') % appliance_name
+
+      - if current_user.miq_groups.length > 1
+        %li.dropdown-submenu
+          %a{:href => "#"}
+            = _('Change Group:')
+            %ul.dropdown-menu.scrollable-menu
+              - current_user.miq_groups.sort_by_desc.each do |group|
+                %li
+                  %a{:title => _("Select to change to another Group"), :href => "#",
+                        :onclick => "miqSparkle(true);miqToggleUserOptions(#{group.id})"}
+                    = group.description
+                    = "(#{_('Current Group')})" if group == current_group
+      - else
+        %li.disabled
+          %a{:href => "#"}
+            = current_group.try(:description)
+      %li.divider
+      %li
+        %a{:href => "/dashboard/logout", :onclick => 'return miqCheckForChanges()', :title => _("Click to Logout")}
+          = _('Logout')
+
+- else
+  = _('Logging into')
+  = appliance_name

@@ -1,0 +1,25 @@
+<%= chart :area %>
+
+  <%=component :chart_guide %>
+    horizontal: true
+    vertical: true
+    thickness: 2
+    alpha: 100
+    type: dashed
+    radius: 7
+    line_color: 000000
+    line_alpha: 75
+    line_thickness: 2
+    text_h_alpha: 100
+    text_v_alpha: 100
+
+  <%=component :chart_pref %>
+    point_shape: none
+
+  <%=component :axis_value %>
+    min: 0
+
+  <%=component :chart_transition %>
+    type:     drop
+    order:    series
+    duration: 0.5

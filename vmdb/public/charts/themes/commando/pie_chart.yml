@@ -1,0 +1,27 @@
+<%= chart :pie %>
+
+  <%=component :chart_label %>
+    position: inside
+    separator: ','
+<% if @options[:graph_options][:decimals] %>
+    decimals:  <%=@options[:graph_options][:decimals]%>
+<% end %>
+
+  <%=component :chart_rect %>
+    x:         <%=@options[:graph_options][:piechartx]%>
+    y:         <%=@options[:graph_options][:piecharty]%>
+
+  <%=component :chart_border %>
+    left_thickness:   0
+    bottom_thickness: 0
+    top_thickness:    0
+    right_thickness:  0
+
+  <%=component :chart_grid_h %>
+    alpha:     0
+
+  <%=component :chart_grid_v %>
+    alpha:     0
+
+  <%=component :series_explode %>
+    number: 0

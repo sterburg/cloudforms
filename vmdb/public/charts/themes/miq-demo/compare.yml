@@ -1,0 +1,21 @@
+<%= chart :compare %>
+
+  <%=comp :chart_label %>
+  
+  <%=component :chart_rect %>
+
+  
+  <%=comp :axis_category %>
+    orientation: horizontal
+    
+  <%=comp :chart_border %>
+      
+    # Add a chart transition
+  <%=component :chart_transition%>   
+    order:    category  
+    type:     none
+    duration: 0.4
+    
+  <%=component :chart_pref%> 
+    rotation_x: 20 
+    rotation_y: 50

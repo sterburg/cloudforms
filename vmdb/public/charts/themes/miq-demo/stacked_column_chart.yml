@@ -1,0 +1,12 @@
+<%= chart :stacked_column %>   
+  <%=component :chart_label %>
+    position: top
+    
+  <%=component :chart_border %>
+    left_thickness:   1
+    bottom_thickness: 2
+    
+    # Add a chart transition
+  <%=component :chart_transition%>   
+     type:     none
+     duration: 1.0

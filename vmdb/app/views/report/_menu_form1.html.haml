@@ -1,0 +1,75 @@
+#menu_div1
+  = form_tag(:action => 'menu_update', :id => "report_menu_form1") do
+    %fieldset{:style => "width: 320px; height: 450px;"}
+      %h3
+        %span#menu1_legend
+          = _('Manage Accordions')
+      #folder_lists
+        %table{:style => "width: 100%", :cellspacing => "3"}
+          %tr
+            %td{:valign => "top"}
+              #folder_grid
+                %ul.list-group
+                  - folders.each do |folder|
+                    %li.list-group-item{:id         => folder[:id],
+                                        :onclick    => "return miqMenuChangeRow('activate', this)",
+                                        :ondblclick => "return miqMenuChangeRow('edit', this)"}
+                      = h folder[:text]
+
+            %td{:width => "24", :valign => "middle"}
+              - buttons = [{:label => _("Move selected folder top"),
+                            :icon => 'fa fa-angle-double-up',
+                            :action => 'top',
+                            :id => 'folder_top'},
+                           {:label => _("Move selected folder up"),
+                            :icon => 'fa fa-angle-up',
+                            :action => 'up',
+                            :id => 'folder_up'},
+                           {:label => _("Move selected folder down"),
+                            :icon => 'fa fa-angle-down',
+                            :action => 'down',
+                            :id => 'folder_down'},
+                           {:label => _("Move selected folder to bottom"),
+                            :icon => 'fa fa-angle-double-down',
+                            :action => 'bottom',
+                            :id => 'folder_bottom'},
+                           {:label => _("Delete selected folder and its contents"),
+                            :icon => 'fa fa-times',
+                            :action => 'delete',
+                            :id => 'folder_delete'},
+                           {:label => _("Add subfolder to selected folder"),
+                            :icon => 'fa fa-plus',
+                            :action => 'add',
+                            :id => 'folder_add'}]
+              - buttons.each do |btn|
+                %i{:class => "rollover fa-2x #{h btn[:icon]}",
+                   :onclick => "return miqMenuChangeRow('#{j btn[:action]}')"}
+          %tr
+            %td{:colspan => "2", :style => "float: right;"}
+              - t = _('Commit expression element changes')
+              = image_tag('/images/toolbars/commit.png',
+                :border                => "0",
+                :class                 => "rollover small",
+                :alt                   => t,
+                :title                 => t,
+                :id                    => "folder_commit",
+                "data-miq_sparkle_on"  => true,
+                "data-miq_sparkle_off" => true,
+                :onclick               => "return miqMenuChangeRow('serialize')")
+              - t = _('Discard expression element changes')
+              = link_to(image_tag('/images/toolbars/discard.png', :id => "folder_discard", :class => "rollover small", :alt => t),
+                {:action => 'discard_changes', :pressed => 'discard_folders', :title => t},
+                "data-miq_sparkle_on"  => true,
+                "data-miq_sparkle_off" => true,
+                :remote                => true)
+            %td
+
+#menu_div3{:style => "display: none;"}
+  %fieldset{:style => "width: 300px; height: 450px;"}
+    %h3
+      = _('Manage Accordions & Folders')
+    %table{:cellspacing => "1"}
+      %tr
+        %td{:align => "left"}
+          %span{:style => "color: #4b4b4b; font-size: 14px; font-weight: bold; line-height: 22px;"}
+            = _("Please select a node at left to edit.")

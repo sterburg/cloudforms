@@ -1,0 +1,210 @@
+Fri May 13 01:30:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 01:30:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 01:30:08 UTC 2016 MIQ(run_ntpdate): offset: -0.000929
+Fri May 13 01:30:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.000929
+Fri May 13 01:30:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 01:30:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 03:30:08 ntpdate[27314]: the NTP socket is in use, exiting
+Fri May 13 01:45:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 01:45:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 01:45:08 UTC 2016 MIQ(run_ntpdate): offset: -0.000172
+Fri May 13 01:45:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.000172
+Fri May 13 01:45:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 01:45:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 03:45:08 ntpdate[27693]: the NTP socket is in use, exiting
+Fri May 13 02:00:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 02:00:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 02:00:07 UTC 2016 MIQ(run_ntpdate): offset: -0.001400
+Fri May 13 02:00:07 UTC 2016 MIQ(run_ntpdate): abs offset: 0.0014
+Fri May 13 02:00:07 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 02:00:07 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 04:00:07 ntpdate[28073]: the NTP socket is in use, exiting
+Fri May 13 02:15:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 02:15:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 02:15:08 UTC 2016 MIQ(run_ntpdate): offset: -0.001667
+Fri May 13 02:15:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001667
+Fri May 13 02:15:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 02:15:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 04:15:08 ntpdate[28487]: the NTP socket is in use, exiting
+Fri May 13 02:30:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 02:30:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 02:30:07 UTC 2016 MIQ(run_ntpdate): offset: -0.001936
+Fri May 13 02:30:07 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001936
+Fri May 13 02:30:07 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 02:30:07 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 04:30:07 ntpdate[28868]: the NTP socket is in use, exiting
+Fri May 13 02:45:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 02:45:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 02:45:08 UTC 2016 MIQ(run_ntpdate): offset: -0.001991
+Fri May 13 02:45:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001991
+Fri May 13 02:45:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 02:45:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 04:45:08 ntpdate[29248]: the NTP socket is in use, exiting
+Fri May 13 03:00:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 03:00:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 03:00:07 UTC 2016 MIQ(run_ntpdate): offset: -0.001883
+Fri May 13 03:00:07 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001883
+Fri May 13 03:00:07 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 03:00:07 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 05:00:07 ntpdate[29628]: the NTP socket is in use, exiting
+Fri May 13 03:15:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 03:15:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 03:15:08 UTC 2016 MIQ(run_ntpdate): offset: -0.001778
+Fri May 13 03:15:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001778
+Fri May 13 03:15:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 03:15:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 05:15:08 ntpdate[30046]: the NTP socket is in use, exiting
+Fri May 13 03:30:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 03:30:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 03:30:08 UTC 2016 MIQ(run_ntpdate): offset: -0.001601
+Fri May 13 03:30:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001601
+Fri May 13 03:30:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 03:30:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 05:30:08 ntpdate[30425]: the NTP socket is in use, exiting
+Fri May 13 03:45:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 03:45:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 03:45:07 UTC 2016 MIQ(run_ntpdate): offset: -0.000256
+Fri May 13 03:45:07 UTC 2016 MIQ(run_ntpdate): abs offset: 0.000256
+Fri May 13 03:45:07 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 03:45:07 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 05:45:07 ntpdate[30804]: the NTP socket is in use, exiting
+Fri May 13 04:00:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 04:00:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 04:00:08 UTC 2016 MIQ(run_ntpdate): offset: -0.000176
+Fri May 13 04:00:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.000176
+Fri May 13 04:00:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 04:00:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 06:00:08 ntpdate[31193]: the NTP socket is in use, exiting
+Fri May 13 04:15:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 04:15:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 04:15:07 UTC 2016 MIQ(run_ntpdate): offset: -0.001323
+Fri May 13 04:15:07 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001323
+Fri May 13 04:15:07 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 04:15:07 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 06:15:07 ntpdate[31601]: the NTP socket is in use, exiting
+Fri May 13 04:30:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 04:30:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 04:30:08 UTC 2016 MIQ(run_ntpdate): offset: -0.001286
+Fri May 13 04:30:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001286
+Fri May 13 04:30:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 04:30:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 06:30:08 ntpdate[31982]: the NTP socket is in use, exiting
+Fri May 13 04:45:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 04:45:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 04:45:07 UTC 2016 MIQ(run_ntpdate): offset: -0.000057
+Fri May 13 04:45:07 UTC 2016 MIQ(run_ntpdate): abs offset: 5.7e-05
+Fri May 13 04:45:07 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 04:45:07 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 06:45:07 ntpdate[32362]: the NTP socket is in use, exiting
+Fri May 13 05:00:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 05:00:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 05:00:08 UTC 2016 MIQ(run_ntpdate): offset: -0.001468
+Fri May 13 05:00:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001468
+Fri May 13 05:00:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 05:00:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 07:00:08 ntpdate[305]: the NTP socket is in use, exiting
+Fri May 13 05:15:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 05:15:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 05:15:08 UTC 2016 MIQ(run_ntpdate): offset: -0.001537
+Fri May 13 05:15:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001537
+Fri May 13 05:15:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 05:15:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 07:15:08 ntpdate[815]: the NTP socket is in use, exiting
+Fri May 13 05:30:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 05:30:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 05:30:07 UTC 2016 MIQ(run_ntpdate): offset: -0.001583
+Fri May 13 05:30:07 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001583
+Fri May 13 05:30:07 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 05:30:07 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 07:30:07 ntpdate[1204]: the NTP socket is in use, exiting
+Fri May 13 05:45:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 05:45:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 05:45:08 UTC 2016 MIQ(run_ntpdate): offset: -0.001620
+Fri May 13 05:45:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.00162
+Fri May 13 05:45:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 05:45:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 07:45:08 ntpdate[1595]: the NTP socket is in use, exiting
+Fri May 13 06:00:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 06:00:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 06:00:07 UTC 2016 MIQ(run_ntpdate): offset: -0.001654
+Fri May 13 06:00:07 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001654
+Fri May 13 06:00:07 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 06:00:07 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 08:00:07 ntpdate[1976]: the NTP socket is in use, exiting
+Fri May 13 06:15:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 06:15:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 06:15:08 UTC 2016 MIQ(run_ntpdate): offset: -0.000127
+Fri May 13 06:15:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.000127
+Fri May 13 06:15:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 06:15:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 08:15:08 ntpdate[2460]: the NTP socket is in use, exiting
+Fri May 13 06:30:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 06:30:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 06:30:07 UTC 2016 MIQ(run_ntpdate): offset: -0.000190
+Fri May 13 06:30:07 UTC 2016 MIQ(run_ntpdate): abs offset: 0.00019
+Fri May 13 06:30:07 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 06:30:07 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 08:30:07 ntpdate[2878]: the NTP socket is in use, exiting
+Fri May 13 06:45:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 06:45:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 06:45:08 UTC 2016 MIQ(run_ntpdate): offset: -0.000173
+Fri May 13 06:45:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.000173
+Fri May 13 06:45:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 06:45:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 08:45:08 ntpdate[3258]: the NTP socket is in use, exiting
+Fri May 13 07:00:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 07:00:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 07:00:08 UTC 2016 MIQ(run_ntpdate): offset: -0.001714
+Fri May 13 07:00:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001714
+Fri May 13 07:00:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 07:00:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 09:00:08 ntpdate[3638]: the NTP socket is in use, exiting
+Fri May 13 07:15:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 07:15:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 07:15:07 UTC 2016 MIQ(run_ntpdate): offset: -0.001669
+Fri May 13 07:15:07 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001669
+Fri May 13 07:15:07 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 07:15:07 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 09:15:07 ntpdate[4054]: the NTP socket is in use, exiting
+Fri May 13 07:30:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 07:30:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 07:30:08 UTC 2016 MIQ(run_ntpdate): offset: -0.001661
+Fri May 13 07:30:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001661
+Fri May 13 07:30:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 07:30:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 09:30:08 ntpdate[4434]: the NTP socket is in use, exiting
+Fri May 13 07:45:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 07:45:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 07:45:07 UTC 2016 MIQ(run_ntpdate): offset: -0.001678
+Fri May 13 07:45:07 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001678
+Fri May 13 07:45:07 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 07:45:07 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 09:45:07 ntpdate[4815]: the NTP socket is in use, exiting
+Fri May 13 08:00:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 08:00:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 08:00:08 UTC 2016 MIQ(run_ntpdate): offset: -0.001593
+Fri May 13 08:00:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001593
+Fri May 13 08:00:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 08:00:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 10:00:08 ntpdate[5193]: the NTP socket is in use, exiting
+Fri May 13 08:15:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 08:15:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 08:15:07 UTC 2016 MIQ(run_ntpdate): offset: -0.001555
+Fri May 13 08:15:07 UTC 2016 MIQ(run_ntpdate): abs offset: 0.001555
+Fri May 13 08:15:07 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 08:15:07 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 10:15:07 ntpdate[5610]: the NTP socket is in use, exiting
+Fri May 13 08:30:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 08:30:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 08:30:08 UTC 2016 MIQ(run_ntpdate): offset: -0.000109
+Fri May 13 08:30:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.000109
+Fri May 13 08:30:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 08:30:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 10:30:08 ntpdate[5990]: the NTP socket is in use, exiting
+Fri May 13 08:45:01 UTC 2016 MIQ(run_ntpdate): Safeguarding time change since Ruby processes are running
+Fri May 13 08:45:01 UTC 2016 MIQ(run_ntpdate): Defaulting time offset threshold to: 30
+Fri May 13 08:45:08 UTC 2016 MIQ(run_ntpdate): offset: 0.007035
+Fri May 13 08:45:08 UTC 2016 MIQ(run_ntpdate): abs offset: 0.007035
+Fri May 13 08:45:08 UTC 2016 MIQ(run_ntpdate): Setting the time with command: /usr/sbin/ntpdate ipa1.cloud.ebpi.nl ipa2.cloud.ebpi.nl ipa3.cloud.ebpi.nl 
+Fri May 13 08:45:08 UTC 2016 MIQ(run_ntpdate): ntpdate failed with error:
+ 13 May 10:45:08 ntpdate[6370]: the NTP socket is in use, exiting

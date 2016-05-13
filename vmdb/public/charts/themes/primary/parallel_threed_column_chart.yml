@@ -1,0 +1,24 @@
+<%= chart :parallel_threed_column %>
+
+  <%=component :chart_label %>
+    position: cursor
+    background_color: ffffff
+
+  <%=component :chart_rect %>
+
+  
+  <%=comp :axis_category %>
+    orientation: diagonal_up
+    
+  <%=comp :chart_border %>
+      
+    # Add a chart transition
+  <%=component :chart_transition%>   
+  order:    category  
+  type: dissolve
+  duration: 0.4
+    
+  <%=component :chart_pref%> 
+    rotation_x: 20 
+    rotation_y: 50
+    

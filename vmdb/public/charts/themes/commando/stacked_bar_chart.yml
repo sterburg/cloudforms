@@ -1,0 +1,9 @@
+<%= chart :stacked_bar %>
+
+  <%=component :chart_rect %>
+    height: <%=@options[:graph_options][:barchartheight]%>
+    y:      <%=@options[:graph_options][:barcharty]%>
+
+  <%=component :chart_transition%>
+    type: dissolve
+    duration: 1.0

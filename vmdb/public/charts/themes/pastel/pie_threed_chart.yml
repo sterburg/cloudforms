@@ -1,0 +1,38 @@
+<%= chart :base %>
+  <%=component :axis_category %>
+
+  <%=component :axis_value %>
+    color:       a79d91
+    skip:        0
+    alpha:       100
+    size:        10
+
+  <%=component :chart_rect %>
+    positive_color: f8af68
+    positive_alpha: 0
+    negative_color: f88868
+    negative_alpha: 0
+
+  <%=component :axis_ticks %>
+    major_color: 54544c
+    minor_color: a19d91
+    value_ticks: true
+
+  <%=component :chart_border %>
+
+  <%=component :chart_grid_h %>
+    thickness: 1
+    color:     000000
+    alpha:     7
+
+  <%=component :chart_grid_v %>
+    thickness: 2
+    color:     000000
+    alpha:     7
+
+  <%=component :chart_label %>
+    position: inside
+    separator: ','
+<% if @options[:graph_options][:decimals] %>
+    decimals:         <%=@options[:graph_options][:decimals]%>
+<% end %>

@@ -1,0 +1,22 @@
+---
+- :vi
+- :svc
+- :clo
+- :inf
+- :con
+- :cnt
+- :aut
+- :opt
+- :set
+- ems-type:atomic_enterprise
+- ems-type:azure
+- ems-type:ec2
+- ems-type:foreman_configuration
+- ems-type:foreman_provisioning
+- ems-type:openshift_enterprise
+- ems-type:openstack
+- ems-type:openstack_infra
+- ems-type:rhevm
+- ems-type:scvmm
+- ems-type:vmwarews
+- :accessInsights

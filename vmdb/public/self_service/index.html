@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="app" class="layout-pf-alt layout-pf-alt-fixed layout-pf-alt-fixed-inner-scroll transitions">
+<head lang="en">
+  <title ng-bind="title">Self Service</title>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <link rel="shortcut icon" href="/favicon.ico"/>
+  <link rel="icon" href="/favicon.ico"/>
+  <base href="/self_service/">
+  <style>
+    [ng-cloak] {
+      display: none;
+    }
+    [ng-cloak].splash {
+      display: block !important;
+    }
+    .splash {
+      display: none;
+      background-color: #428bca;
+    }
+  </style>
+  <link rel="stylesheet" href="styles/lib-3715ac2935.css">
+
+  <link rel="stylesheet" href="styles/app-025801c92e.css">
+</head>
+<body ng-controller="AppController">
+  <div class="ng-cloak splash">
+    <div class="splash__overlay">
+      <div class="splash__message"></div>
+    </div>
+  </div>
+
+  <ui-view></ui-view>
+
+  <script src="js/lib-5a4f3e81e2.js"></script>
+
+  <script src="js/app-a385ae71a4.js"></script>
+</body>
+</html>

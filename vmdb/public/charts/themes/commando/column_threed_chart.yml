@@ -1,0 +1,27 @@
+<%= chart :base %>
+
+  <%=component :axis_category %>
+    size:   10
+    color:  61332b
+    bold:   true
+    alpha:  100
+
+  <%=component :axis_value %>
+    color:       a79d91
+    skip:        0
+    alpha:       100
+    size:        10
+
+  <%=component :chart_rect %>
+
+  <%=component :axis_ticks %>
+    major_color: 54544c
+    minor_color: a19d91
+    value_ticks: false
+
+  <%=component :chart_label %>
+    position: right
+    color:    F5F0BE
+    alpha:    70
+
+  <%=component :series_color %>

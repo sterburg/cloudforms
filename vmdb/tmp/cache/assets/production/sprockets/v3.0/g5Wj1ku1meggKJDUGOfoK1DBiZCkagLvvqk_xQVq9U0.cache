@@ -1,0 +1,37 @@
+{:uriI"öfile:///opt/rh/cfme-gemset/gems/rails-assets-markusslima--bootstrap-filestyle-1.2.1/app/assets/documents/bootstrap-filestyle/bootstrap-filestyle.jquery.json?type=application/json&id=7662e94c28e981360fce684a37945dff14db8916146f6bfaf4c16269e0732b6a:ET:load_pathI"f/opt/rh/cfme-gemset/gems/rails-assets-markusslima--bootstrap-filestyle-1.2.1/app/assets/documents;T:filenameI"•/opt/rh/cfme-gemset/gems/rails-assets-markusslima--bootstrap-filestyle-1.2.1/app/assets/documents/bootstrap-filestyle/bootstrap-filestyle.jquery.json;T:	nameI"3bootstrap-filestyle/bootstrap-filestyle.jquery;T:logical_pathI"8bootstrap-filestyle/bootstrap-filestyle.jquery.json;T:content_typeI"application/json;T:sourceI"{
+	"name": "bootstrap-filestyle",
+	"title": "Bootstrap styling input file",
+	"version": "v1.2",
+	"description": "jQuery FileStyle for Bootstrap - Customization of input html file for Bootstrap Twitter",
+	"keywords": ["jquery", "file", "upload", "boostrap", "multiple", "input", "style"],
+	"homepage": "http://markusslima.github.io/bootstrap-filestyle/",
+	"demo": "http://markusslima.github.io/bootstrap-filestyle/",
+	"bugs": "https://github.com/markusslima/bootstrap-filestyle/issues",
+	"author": {
+		"name": "Markus Lima",
+		"url": "https://github.com/markusslima"
+	},
+	"maintainers": [
+		{
+			"name": "Markus Lima",
+			"url": "https://github.com/markusslima"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/markusslima/bootstrap-filestyle"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://www.opensource.org/licenses/MIT"
+		}
+	],
+	"devDependencies": {
+		"jquery": ">=1.5"
+	}
+}
+;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"@processors:type=application/json&file_type=application/json;TTI"£file-digest:///opt/rh/cfme-gemset/gems/rails-assets-markusslima--bootstrap-filestyle-1.2.1/app/assets/documents/bootstrap-filestyle/bootstrap-filestyle.jquery.json;TT:charsetI"
+utf-8;F:digest"%~#‡‚*Eî4D´UëÍ—õÄñgÀÒ@ù5«Ğå[C:lengthi:dependencies_digest"%`îep‘ÌIû$âşHá@"Ha™âNæOI:idI"E7662e94c28e981360fce684a37945dff14db8916146f6bfaf4c16269e0732b6a;F:
+mtimel+¥â]V

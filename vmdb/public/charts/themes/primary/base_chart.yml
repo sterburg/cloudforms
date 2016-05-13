@@ -1,0 +1,200 @@
+<%= chart :base %>
+
+  <%=component :link %>
+    areas:
+
+<% if @options[:graph_options][:link_url] %>
+  # Add a link when clicking anywhere on the chart
+      - <%=area :area%>
+        x:                <%=@options[:graph_options][:chartx]%>
+        y:                <%=@options[:graph_options][:charty]%>
+        width:            <%=@options[:graph_options][:chartwidth]%>
+        height:           <%=@options[:graph_options][:chartheight]%>
+        text:             <%=@options[:graph_options][:link_text]%>
+        background_color: 000000
+        color:            ffffff
+        url:              <%= escape_yaml_url(@options[:graph_options][:link_url])%>
+<% end %>
+
+<% if @options[:graph_options][:zoom_url] %>
+  <% if !@options[:graph_options][:chart2] || @options[:graph_options][:composite] %>
+  # Add a zoom/un-zoom link
+      - <%=area :area%>
+      <% if @options[:graph_options][:chartsize] == :large %>
+        x:                2
+        y:                <%=@options[:graph_options][:totalheight] - 26%>
+        width:            24
+        height:           24
+        tooltip:          "Click to zoom out"
+      <% else %>
+        x:                0
+        y:                <%=@options[:graph_options][:totalheight] - 16%>
+        width:            16
+        height:           16
+        tooltip:          "Click to zoom in"
+      <% end %>
+        background_color: 000000
+        color:            ffffff
+        url:              <%= escape_yaml_url(@options[:graph_options][:zoom_url])%>
+  <% end %>
+<% end %>
+
+<% if @options[:graph_options][:link_data_url] %>
+  # Add a link when clicking on chart data items
+  <%=component :link_data %>
+    url:     <%= escape_yaml_url(@options[:graph_options][:link_data_url])%>
+    target:  javascript
+<% end %>
+
+  <%=component :draw %>
+    components:
+<%# if @options[:show_title] && !@options[:graph_options][:composite] %>
+<% if false %>
+      # Add a chart title, if this is not a composite chart
+      - <%=drawing :text %>
+         transition: dissolve
+         delay:
+         duration:   0.4
+         bold:       true
+         size:       <%=@options[:graph_options][:titlesize]%>
+         rotation:   270
+         color:      000000
+         alpha:      100
+  <% if @options[:graph_options][:composite] %>
+    # Indent if composite chart
+    <% if @options[:graph_options][:chartsize] == :large %>
+         x:          15
+    <% else %>
+         x:          5
+    <% end %>
+  <% else %>
+         x:          0
+  <% end %>
+         y:          <%=@options[:graph_options][:charty] + @options[:graph_options][:chartheight]%>
+         width:      <%=@options[:graph_options][:chartheight]%>
+         h_align:    center
+         text:       "<%=@options[:title]%>"
+<% end %>
+
+<% if @options[:graph_options][:chart_type] && @options[:graph_options][:zoom_url] %>
+  <% if !@options[:graph_options][:chart2] || @options[:graph_options][:composite] %>
+      # Show zoom/un-zoom image
+      - <%=drawing :image %>
+    <% if @options[:graph_options][:chartsize] == :large %>
+         url:        "/images/icons/24/chart_unzoom.png"
+         x:          2
+         y:          <%=@options[:graph_options][:totalheight] - 26%>
+    <% else %>
+         url:        "/images/icons/16/chart_zoom.png"
+         x:          0
+         y:          <%=@options[:graph_options][:totalheight] - 16%>
+    <% end %>
+  <% end %>
+<% end %>
+
+  <%=component :axis_value %>
+    color:       000000
+    skip:        0
+    alpha:       100
+<% if @options[:graph_options][:max_value] && !@options[:graph_options][:composite] %>
+    max:         <%=@options[:graph_options][:max_value]%>
+<% end %>
+<% if @options[:graph_options][:value_suffix] %>
+    suffix:      '<%=@options[:graph_options][:value_suffix]%>'
+<% end %>
+<% if @options[:graph_options][:value_steps] %>
+    steps:      '<%=@options[:graph_options][:value_steps]%>'
+<% else %>
+    steps:      0
+<% end %>
+
+  <%=component :chart_rect %>
+    x:                <%=@options[:graph_options][:chartx]%>
+    y:                <%=@options[:graph_options][:charty]%>
+    width:            <%=@options[:graph_options][:chartwidth]%>
+    height:           <%=@options[:graph_options][:chartheight]%>
+    positive_color:   ffffff
+    positive_alpha:   20
+    negative_color:   ffff66
+    negative_alpha:   20
+
+  <%=component :legend %>
+<% if @options[:graph_options][:composite] %>
+    layout:           horizontal
+    x:                <%=@options[:graph_options][:chartx]%>
+    y:                0
+#    width:            50
+    height:           10
+<% else %>
+    layout:           horizontal
+    x:                <%=@options[:graph_options][:legendx]%>
+    y:                <%=@options[:graph_options][:legendy]%>
+    width:            <%=@options[:graph_options][:legendwidth]%>
+    height:           <%=@options[:graph_options][:legendheight]%>
+<% end %>
+    margin:           5
+    fill_color:       000000
+    fill_alpha:       5
+    line_color:       000000
+    line_alpha:       50
+    line_thickness:   1
+    alpha:            100
+    color:            000000
+#    size:     <%#=@options[:graph_options][:legendsize]%>	# Trusting charts to pick the right font - sprint 43
+
+  <%=component :axis_category %>
+    color:  000000
+    bold:   true
+    skip:   <%= @options[:graph_options][:axis_skip] || 0 %>
+<% if @options[:graph_options][:chart2] && !@options[:graph_options][:composite] %>
+    alpha:  0
+<% else %>
+    alpha:  100
+<% end %>
+
+  <%=component :axis_ticks %>
+    major_color:      54544c
+    minor_color:      a19d91
+    minor_count:      0
+<% if @options[:graph_options][:chart2] && !@options[:graph_options][:composite] %>
+    value_ticks:      false
+    category_ticks:   false
+<% else %>
+    value_ticks:      true
+<% end %>
+
+  <%=component :chart_border %>
+    left_thickness:
+    bottom_thickness:
+    top_thickness:
+    right_thickness:
+
+  <%=component :chart_grid_h %>
+    thickness: 1
+    color:     000000
+    alpha:     20
+
+  <%=component :chart_grid_v %>
+    thickness: 1
+    color:     000000
+    alpha:     20
+
+  <%=component :chart_transition %>
+    order:    category
+    type:     dissolve
+    duration: 0.4
+
+  <%=component :chart_label %>
+
+  <%=component :context_menu %>
+    about:       false
+    print:       false
+    full_screen: false
+
+  <%=component :tooltip %>
+    background_alpha: 40
+    duration:         10
+    size:             <%=@options[:graph_options][:legendsize]%>
+
+  <%=component :series_color %>
+    colors:  3d01a4, 66b032, fcc100, 0247fe, 145728, d0ea2b, fb9902, 8601af, 0392CE, FABC02, A7194B

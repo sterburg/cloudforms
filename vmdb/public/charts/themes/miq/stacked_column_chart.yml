@@ -1,0 +1,9 @@
+<%= chart :stacked_column %>
+  <%=component :chart_label %>
+    position: top
+
+  <%=component :chart_border %>
+    left_thickness:   1
+    bottom_thickness: 2
+    
+

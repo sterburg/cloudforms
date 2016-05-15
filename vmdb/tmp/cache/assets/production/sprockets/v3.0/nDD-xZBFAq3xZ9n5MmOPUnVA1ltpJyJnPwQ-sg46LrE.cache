@@ -1,24 +1,0 @@
-{:uriI"¼file:///opt/rh/cfme-gemset/gems/rails-assets-sprintf-1.0.3/app/assets/templates/sprintf/demo/angular.html?type=text/html&id=cb6de456d83d907218c48b3192e1422334c445cd84df02f286b813dfc8b97390:ET:load_pathI"M/opt/rh/cfme-gemset/gems/rails-assets-sprintf-1.0.3/app/assets/templates;T:filenameI"g/opt/rh/cfme-gemset/gems/rails-assets-sprintf-1.0.3/app/assets/templates/sprintf/demo/angular.html;T:	nameI"sprintf/demo/angular;T:logical_pathI"sprintf/demo/angular.html;T:content_typeI"text/html;T:sourceI"²<!doctype html>
-<html ng-app="app">
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>
-    <script src="../src/sprintf.js"></script>
-    <script src="../src/angular-sprintf.js"></script>
-</head>
-<body>
-    <pre>{{ "%+010d"|sprintf:-123 }}</pre>
-    <pre>{{ "%+010d"|vsprintf:[-123] }}</pre>
-    <pre>{{ "%+010d"|fmt:-123 }}</pre>
-    <pre>{{ "%+010d"|vfmt:[-123] }}</pre>
-    <pre>{{ "I've got %2$d apples and %1$d oranges."|fmt:4:2 }}</pre>
-    <pre>{{ "I've got %(apples)d apples and %(oranges)d oranges."|fmt:{apples: 2, oranges: 4} }}</pre>
-
-    <script>
-        angular.module("app", ["sprintf"])
-    </script>
-</body>
-</html>
-;T:metadata{	:dependencieso:Set:
-@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"ufile-digest:///opt/rh/cfme-gemset/gems/rails-assets-sprintf-1.0.3/app/assets/templates/sprintf/demo/angular.html;TT:charsetI"
-utf-8;F:digest"%½^¶A6ý,ErªH!y%¼R~æ)géØŒm¬†y:lengthi²:dependencies_digest"%á?­ßwÑŸÀ¶–UÀ}Ð³L‰;Q:—Kúl}<¬®ú‰:idI"Ecb6de456d83d907218c48b3192e1422334c445cd84df02f286b813dfc8b97390;F:
-mtimel+¥â]V

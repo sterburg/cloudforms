@@ -1,14 +1,0 @@
-{:uriI"Èfile:///opt/rh/cfme-gemset/gems/rails-assets-c3-0.4.10/app/assets/documents/c3/extensions/exporter/config.json?type=application/json&id=ec6f4fb54f842c8642c13dd0f6ef448058583632a13feb7e4644ef9ccf552316:ET:load_pathI"I/opt/rh/cfme-gemset/gems/rails-assets-c3-0.4.10/app/assets/documents;T:filenameI"l/opt/rh/cfme-gemset/gems/rails-assets-c3-0.4.10/app/assets/documents/c3/extensions/exporter/config.json;T:	nameI""c3/extensions/exporter/config;T:logical_pathI"'c3/extensions/exporter/config.json;T:content_typeI"application/json;T:sourceI"æ{
-	"js": [
-		"../../bower_components/d3/d3.min.js",
-		"../../c3.min.js"
-	],
-	"css": [
-		"../../c3.css"
-	],
-
-	"template": "<html><head><meta charset=\"utf-8\"><style>{0}</style></head><body><div id=\"chart\"></div></body></html>"
-};T:metadata{	:dependencieso:Set:
-@hash{	I"environment-version;TTI"environment-paths;TTI"@processors:type=application/json&file_type=application/json;TTI"zfile-digest:///opt/rh/cfme-gemset/gems/rails-assets-c3-0.4.10/app/assets/documents/c3/extensions/exporter/config.json;TT:charsetI"
-utf-8;F:digest"%ˆ€w3ë ¥ä8&Šjó#ï¶ü«»x\-s¹Í:lengthiæ:dependencies_digest"%çHßyüËI­O¼”{ĞösóÒ#I#ÙwšÈpªp·:idI"Eec6f4fb54f842c8642c13dd0f6ef448058583632a13feb7e4644ef9ccf552316;F:
-mtimel+¥â]V

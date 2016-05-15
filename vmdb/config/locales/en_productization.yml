@@ -1,9 +1,0 @@
----
-en:
-  product:
-    name: CFME
-  dictionary:
-    model:
-      FileDepotFtpAnonymousRedhatDropbox: Red Hat Dropbox
-    ui_title:
-      foreman: Red Hat Satellite

@@ -23,8 +23,7 @@ module EmsCloudHelper::TextualSummary
   # Items
   #
   def textual_provider_region
-    return nil if @ems.provider_region.nil?
-    {:label => "Region", :value => @ems.description}
+    {:label => "Region", :value => @ems.kind_of?(ManageIQ::Providers::Openstack::CloudManager) ? @ems.provider_region : @ems.description }
   end
 
   def textual_hostname

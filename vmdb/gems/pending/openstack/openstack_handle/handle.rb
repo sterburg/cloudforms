@@ -41,20 +41,21 @@ module OpenstackHandle
       yield "http", {}
     end
 
-    def self.raw_connect_try_ssl(username, password, address, port, service = "Compute", opts = nil, api_version = nil)
+    def self.raw_connect_try_ssl(username, password, address, port, service = "Compute", opts = nil, api_version = nil, region = nil)
       try_connection do |scheme, connection_options|
         auth_url = auth_url(address, port, scheme, api_version)
         opts[:connection_options] = (opts[:connection_options] || {}).merge(connection_options)
-        raw_connect(username, password, auth_url, service, opts)
+        raw_connect(username, password, auth_url, service, opts, region)
       end
     end
 
-    def self.raw_connect(username, password, auth_url, service = "Compute", extra_opts = nil)
+    def self.raw_connect(username, password, auth_url, service = "Compute", extra_opts = nil, region = nil)
       opts = {
         :provider                => 'OpenStack',
         :openstack_auth_url      => auth_url,
         :openstack_username      => username,
         :openstack_api_key       => password,
+        :openstack_region        => region,
         :openstack_endpoint_type => 'publicURL',
       }
       opts.merge!(extra_opts) if extra_opts
@@ -64,6 +65,9 @@ module OpenstackHandle
       # Ensure the that if the Storage service is not available, it will not
       # throw an error trying to build an connection error message.
       opts[:openstack_service_type] = ["object-store"] if service == "Storage"
+
+      $fog_log.warn("MIQ(#{self.class.name}##{__method__}) fogfog.raw_connect.extra=#{extra_opts.inspect} ")
+      $fog_log.warn("MIQ(#{self.class.name}##{__method__}) fogfog.raw_connect.opts=#{opts.inspect} ")
 
       if service == "Planning"
         # Special behaviour for Planning service Tuskar, since it is OpenStack specific service, there is no
@@ -105,12 +109,13 @@ module OpenstackHandle
       attr_reader :connection_options
     end
 
-    def initialize(username, password, address, port = nil, api_version = nil)
+    def initialize(username, password, address, port = nil, api_version = nil, region = nil)
       @username    = username
       @password    = password
       @address     = address
       @port        = port || 5000
       @api_version = api_version || 'v2'
+      @region      = region
 
       @connection_cache   = {}
       @connection_options = self.class.connection_options
@@ -121,6 +126,7 @@ module OpenstackHandle
     end
 
     def connect(options = {})
+      $fog_log.warn("MIQ(#{self.class.name}##{__method__}) fogfog.region=#{region} fogfog.options=#{options.inspect} ")
       opts     = options.dup
       service  = (opts.delete(:service) || "Compute").to_s.camelize
       tenant   = opts.delete(:tenant_name)
@@ -143,7 +149,7 @@ module OpenstackHandle
       svc_cache[tenant] ||= begin
         opts[:connection_options] = connection_options if connection_options
 
-        raw_service = self.class.raw_connect_try_ssl(username, password, address, port, service, opts, api_version)
+        raw_service = self.class.raw_connect_try_ssl(username, password, address, port, service, opts, api_version, region)
         service_wrapper_name = "#{service}Delegate"
         # Allow openstack to define new services without explicitly requiring a
         # service wrapper.

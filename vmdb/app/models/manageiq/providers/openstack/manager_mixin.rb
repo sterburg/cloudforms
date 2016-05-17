@@ -5,9 +5,9 @@ module ManageIQ::Providers::Openstack::ManagerMixin
   # OpenStack interactions
   #
   module ClassMethods
-    def raw_connect(username, password, auth_url, service = "Compute")
+    def raw_connect(username, password, auth_url, service = "Compute", region = nil)
       require 'openstack/openstack_handle'
-      OpenstackHandle::Handle.raw_connect(username, password, auth_url, service)
+      OpenstackHandle::Handle.raw_connect(username, password, auth_url, service, region)
     end
 
     def auth_url(address, port = nil)
@@ -32,7 +32,7 @@ module ManageIQ::Providers::Openstack::ManagerMixin
       username = options[:user] || authentication_userid(options[:auth_type])
       password = options[:pass] || authentication_password(options[:auth_type])
 
-      osh = OpenstackHandle::Handle.new(username, password, address, port, api_version)
+      osh = OpenstackHandle::Handle.new(username, password, address, port, api_version, provider_region)
       osh.connection_options = {:instrumentor => $fog_log}
       osh
     end
@@ -43,6 +43,8 @@ module ManageIQ::Providers::Openstack::ManagerMixin
   end
 
   def connect(options = {})
+    options[:openstack_region] = self.provider_region
+    _log.error("OpenStack.connect(region=#{self.provider_region})")
     openstack_handle(options).connect(options)
   end
 
@@ -56,7 +58,7 @@ module ManageIQ::Providers::Openstack::ManagerMixin
 
   def event_monitor_options
     @event_monitor_options ||= begin
-      opts = {:hostname => hostname}
+      opts = {:hostname => hostname, :openstack_region => self.provider_region, :region => self.provider_region, :provider_region => self.provider_region}
       opts[:port] = event_monitor_class.worker_settings[:amqp_port]
       if self.has_authentication_type? :amqp
         # authentication_userid/password will happily return the "default"
@@ -79,7 +81,7 @@ module ManageIQ::Providers::Openstack::ManagerMixin
   def translate_exception(err)
     case err
     when Excon::Errors::Unauthorized
-      MiqException::MiqInvalidCredentialsError.new "Login failed due to a bad username or password."
+      MiqException::MiqInvalidCredentialsError.new "Login failed: #{err.message}."
     when Excon::Errors::Timeout
       MiqException::MiqUnreachableError.new "Login attempt timed out"
     when Excon::Errors::SocketError
@@ -99,7 +101,9 @@ module ManageIQ::Providers::Openstack::ManagerMixin
     miq_exception = translate_exception(err)
     raise unless miq_exception
 
-    _log.error("Error Class=#{err.class.name}, Message=#{err.message}")
+    bt=err.backtrace.join("\n")
+    _log.error("Error Class=#{err.class.name}, Message=#{err.message}, Backtrace=#{bt}")
+     
     raise miq_exception
   end
   private :verify_api_credentials

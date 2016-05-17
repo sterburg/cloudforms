@@ -6,6 +6,7 @@ module ManageIQ::Providers::Openstack::EventCatcherMixin
       options = {}
       options[:hostname] = @ems.hostname
       options[:port]     = worker_settings[:amqp_port]
+      options[:openstack_region] = @ems.provider_region
       if @ems.has_authentication_type? :amqp
         options[:username] = @ems.authentication_userid(:amqp)
         options[:password] = @ems.authentication_password(:amqp)

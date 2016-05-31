@@ -132,10 +132,15 @@ module OpenstackHandle
       tenant   = opts.delete(:tenant_name)
       # TODO(lsmola) figure out from where to take the project name and domain name
       domain   = opts.delete(:domain_name) || 'admin_domain'
+      region   = @region
 
       unless tenant
         tenant = "any_tenant" if service == "Identity"
         tenant ||= default_tenant_name
+      end
+
+      if service == "Storage"
+        opts[:openstack_region] = 'ams5' if address == 'api.cloud.ebpi.nl'
       end
 
       unless service == "Identity"

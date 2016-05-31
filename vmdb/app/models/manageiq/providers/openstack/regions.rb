@@ -10,6 +10,10 @@ module ManageIQ
           :name        => "ams6",
           :description => "AMS6",
         },
+        "RegionOne" => {
+          :name        => "RegionOne",
+          :description => "RegionOne",
+        },
       }
 
       def self.all
